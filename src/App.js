@@ -1,21 +1,25 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Homepage from './components/Homepage';
+import ShopPage from './components/ShopPage';
 import Nav from './components/Nav';
-import Cart from './components/Cart';
 
 function App() {
   return (
-    <div>
-      <Homepage />
-      <Nav />
-      <Cart />
-    </div>
+    <>
+      <BrowserRouter>
+        <Nav />
+        <Routes>
+          <Route path="/" element={<Homepage />} />
+          <Route path="/shop-page" element={<ShopPage />} />
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 
 export default App;
 
-// RouteSwitch -> App       -> Nav
+// RouteSwitch -> App       -> Nav  -> Cart
 //             -> Homepage
 //             -> Shop Page -> Card
-//             -> Cart
