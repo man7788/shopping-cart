@@ -6,17 +6,19 @@ import ShopPage from './components/ShopPage';
 import Nav from './components/Nav';
 
 function App() {
-  const [item, setItem] = useState(0);
+  const [cartItems, setCartItems] = useState(0);
 
   return (
     <>
       <BrowserRouter>
-        <Nav item={item} />
+        <Nav cartItems={cartItems} />
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route
             path="/shop-page"
-            element={<ShopPage item={item} setItem={setItem} />}
+            element={
+              <ShopPage cartItems={cartItems} setCartItems={setCartItems} />
+            }
           />
         </Routes>
       </BrowserRouter>

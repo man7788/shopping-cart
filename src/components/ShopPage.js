@@ -1,10 +1,10 @@
 import Card from './Card';
 
-function ShopPage({ item, setItem }) {
+function ShopPage({ cartItems, setCartItems }) {
   return (
     <div>
       Shop Page
-      <Card item={item} setItem={setItem} />
+      <Card cartItems={cartItems} setCartItems={setCartItems} />
     </div>
   );
 }

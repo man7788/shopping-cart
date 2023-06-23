@@ -2,13 +2,13 @@ import { Link } from 'react-router-dom';
 
 import Cart from './Cart';
 
-function Nav({ item }) {
+function Nav({ cartItems }) {
   return (
     <div>
       <Link to="/">Homepage</Link>
       <br />
       <Link to="/shop-page">Shop Page</Link>
-      <Cart item={item} />
+      <Cart cartItems={cartItems} />
     </div>
   );
 }
