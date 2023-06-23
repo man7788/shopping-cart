@@ -1,16 +1,14 @@
 import { Link } from 'react-router-dom';
 
-function Nav() {
+import Cart from './Cart';
+
+function Nav({ item }) {
   return (
     <div>
-      <ul>
-        <li>
-          <Link to="/">Homepage</Link>
-        </li>
-        <li>
-          <Link to="/shop-page">Shop Page</Link>
-        </li>
-      </ul>
+      <Link to="/">Homepage</Link>
+      <br />
+      <Link to="/shop-page">Shop Page</Link>
+      <Cart item={item} />
     </div>
   );
 }
