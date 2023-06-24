@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import '../styles/Card.css';
 
 function Card({ cartItems, setCartItems, itemName = 'Item Name' }) {
   const [quantity, setQuantity] = useState(0);
@@ -13,14 +14,27 @@ function Card({ cartItems, setCartItems, itemName = 'Item Name' }) {
     setQuantity(e.target.value);
   };
 
+  const addOne = () => {
+    setQuantity(quantity + 1);
+  };
+  const minusOne = () => {
+    if (quantity !== 0) {
+      setQuantity(quantity - 1);
+    }
+  };
+
   return (
     <div>
       {itemName}
       <form onSubmit={addToCart}>
-        <input onChange={handleChange} value={quantity} type="number"></input>
-        <button data-testid="add" type="submit">
-          Add
+        <button onClick={minusOne} type="button">
+          -
         </button>
+        <input onChange={handleChange} value={quantity} type="number"></input>
+        <button onClick={addOne} type="button">
+          +
+        </button>
+        <button type="submit">Add To Cart</button>
       </form>
     </div>
   );
