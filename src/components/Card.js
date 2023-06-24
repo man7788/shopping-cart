@@ -30,7 +30,12 @@ function Card({ cartItems, setCartItems, itemName = 'Item Name' }) {
         <button onClick={minusOne} type="button">
           -
         </button>
-        <input onChange={handleChange} value={quantity} type="number"></input>
+        <input
+          name={itemName}
+          onChange={handleChange}
+          value={quantity}
+          type="number"
+        ></input>
         <button onClick={addOne} type="button">
           +
         </button>
