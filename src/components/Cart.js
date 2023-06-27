@@ -1,5 +1,12 @@
+import cart from '../images/cart.png';
+
 function Cart({ cartItems }) {
-  return <div data-testid="cart">{cartItems}</div>;
+  return (
+    <div className="cart-div" data-testid="cart">
+      <img className="cart" src={cart} alt="cart" />
+      {cartItems}
+    </div>
+  );
 }
 
 export default Cart;
