@@ -3,7 +3,7 @@ import welcome from '../images/welcome.jpg';
 
 function Homepage() {
   return (
-    <div>
+    <div className="homepage">
       <img className="welcome" src={welcome} alt="Welcome" />
     </div>
   );

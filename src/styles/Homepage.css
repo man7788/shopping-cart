@@ -1,0 +1,10 @@
+.homepage {
+  /* border: 2px solid orange; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcome {
+  width: 40rem;
+}
