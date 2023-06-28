@@ -1,5 +1,6 @@
 .nav-div {
   /* border: 2px solid orange; */
+  width: max(50rem, 100vw);
   font-size: 1.5rem;
   display: flex;
   align-items: center;
@@ -10,15 +11,11 @@
 .logo {
   filter: invert(100%) sepia(23%) saturate(23%) hue-rotate(191deg)
     brightness(111%) contrast(92%);
-  /* margin-right: auto;
-  margin-left: 1rem; */
   width: 5rem;
 }
 
 .pages {
   display: flex;
-  /* margin-left: auto;
-  margin-right: 12rem; */
 }
 
 .page {
@@ -28,7 +25,6 @@
 .cart-div {
   /* border: 2px solid yellow; */
   width: 5rem;
-  margin-right: 2rem;
   display: flex;
   align-items: center;
 }
