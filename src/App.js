@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, HashRouter, Routes, Route } from 'react-router-dom';
 import { useState } from 'react';
 import './App.css';
 import Homepage from './components/Homepage';
@@ -10,7 +10,8 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
+      {/* <BrowserRouter> */}
+      <HashRouter>
         <div class="app-div">
           <Nav cartItems={cartItems} />
           <Routes>
@@ -23,7 +24,8 @@ function App() {
             />
           </Routes>
         </div>
-      </BrowserRouter>
+      </HashRouter>
+      {/* </BrowserRouter> */}
     </>
   );
 }
