@@ -11,16 +11,18 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <Nav cartItems={cartItems} />
-        <Routes>
-          <Route path="/" element={<Homepage />} />
-          <Route
-            path="/shop-page"
-            element={
-              <ShopPage cartItems={cartItems} setCartItems={setCartItems} />
-            }
-          />
-        </Routes>
+        <div class="app-div">
+          <Nav cartItems={cartItems} />
+          <Routes>
+            <Route path="/" element={<Homepage />} />
+            <Route
+              path="/shop-page"
+              element={
+                <ShopPage cartItems={cartItems} setCartItems={setCartItems} />
+              }
+            />
+          </Routes>
+        </div>
       </BrowserRouter>
     </>
   );
