@@ -1,5 +1,6 @@
-import Card from './Card';
 import uniqid from 'uniqid';
+import '../styles/ShopPage.css';
+import Card from './Card';
 
 function ShopPage({ cartItems, setCartItems }) {
   const storage = ['Alpha', 'Bravo', 'Charlie', 'Delta'];
@@ -15,12 +16,7 @@ function ShopPage({ cartItems, setCartItems }) {
     );
   });
 
-  return (
-    <div>
-      Shop Page
-      {display}
-    </div>
-  );
+  return <div className="shop-page">{display}</div>;
 }
 
 export default ShopPage;
