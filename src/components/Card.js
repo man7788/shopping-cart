@@ -24,9 +24,9 @@ function Card({ cartItems, setCartItems, itemName = 'Item Name' }) {
   };
 
   return (
-    <div>
+    <div className="card">
       {itemName}
-      <form onSubmit={addToCart}>
+      <form className="form" onSubmit={addToCart}>
         <button onClick={minusOne} type="button">
           -
         </button>
