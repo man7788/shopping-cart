@@ -1,7 +1,6 @@
 .shop-page {
   border: 2px solid grey;
-  width: fit-content;
+  width: max(40rem, 60vw);
   display: grid;
   grid-template-columns: repeat(auto, 1fr);
-  margin: 0 auto 0 auto;
 }
