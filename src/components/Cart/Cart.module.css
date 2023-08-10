@@ -1,0 +1,12 @@
+.cartDiv {
+  /* border: 2px solid yellow; */
+  width: 5rem;
+  display: flex;
+  align-items: center;
+}
+
+.cart {
+  filter: invert(100%) sepia(23%) saturate(23%) hue-rotate(191deg)
+    brightness(111%) contrast(92%);
+  width: 3rem;
+}

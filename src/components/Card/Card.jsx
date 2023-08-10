@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import '../styles/Card.css';
+import styles from './Card.module.css';
 
 function Card({ cartItems, setCartItems, itemName = 'Item Name' }) {
   const [quantity, setQuantity] = useState(0);
@@ -24,9 +24,9 @@ function Card({ cartItems, setCartItems, itemName = 'Item Name' }) {
   };
 
   return (
-    <div className="card">
+    <div className={styles.card}>
       {itemName}
-      <form className="form" onSubmit={addToCart}>
+      <form className={styles.form} onSubmit={addToCart}>
         <button onClick={minusOne} type="button">
           -
         </button>

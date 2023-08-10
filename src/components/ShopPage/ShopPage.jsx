@@ -1,7 +1,7 @@
 import uniqid from 'uniqid';
 import { useOutletContext } from 'react-router-dom';
-import '../styles/ShopPage.css';
-import Card from './Card';
+import styles from './ShopPage.module.css';
+import Card from '../Card/Card';
 
 function ShopPage() {
   const { cartItems, setCartItems } = useOutletContext();
@@ -24,7 +24,7 @@ function ShopPage() {
     );
   });
 
-  return <div className="shop-page">{display}</div>;
+  return <div className={styles.shopPage}>{display}</div>;
 }
 
 export default ShopPage;
