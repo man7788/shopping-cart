@@ -21,19 +21,3 @@
 .page {
   margin: 0 1rem 0 1rem;
 }
-
-.link {
-  /* border: 2px solid orange; */
-  text-decoration: none;
-  color: whitesmoke;
-  padding: 0.5rem 1.5rem 0.5rem 1.5rem;
-}
-
-.active-link {
-  /* border: 2px solid orange; */
-  text-decoration: none;
-  padding: 0.5rem 1.5rem 0.5rem 1.5rem;
-  border-radius: 2rem;
-  color: whitesmoke;
-  background: yellowgreen;
-}

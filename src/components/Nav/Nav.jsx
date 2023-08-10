@@ -1,7 +1,18 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import styles from './Nav.module.css';
 import Cart from '../Cart/Cart';
 import logo from '../../images/logo.svg';
+import styled from 'styled-components';
+
+const StyledLink = styled(NavLink)`
+  text-decoration: none;
+  color: whitesmoke;
+  padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+  &.active {
+    border-radius: 2rem;
+    background: yellowgreen;
+  }
+`;
 
 function Nav({ cartItems }) {
   return (
@@ -9,10 +20,10 @@ function Nav({ cartItems }) {
       <img className={styles.logo} src={logo} alt="logo" />
       <div className={styles.pages}>
         <div className={styles.page}>
-          <Link to="/">Homepage</Link>
+          <StyledLink to="/">Homepage</StyledLink>
         </div>
         <div className={styles.page}>
-          <Link to="/shop-page">Shop Page</Link>
+          <StyledLink to="/shop-page">Shop Page</StyledLink>
         </div>
       </div>
       <Cart cartItems={cartItems} />
