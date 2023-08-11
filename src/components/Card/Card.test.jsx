@@ -1,10 +1,11 @@
 import { render, screen } from '@testing-library/react';
+import { vi } from 'vitest';
 import userEvent from '@testing-library/user-event';
 import Card from './Card';
 
 it('should invoke onClick event', async () => {
   const user = userEvent.setup();
-  const mockFn = jest.fn();
+  const mockFn = vi.fn();
 
   render(<Card setCartItems={mockFn} />);
 
@@ -29,7 +30,7 @@ it('should display number in input field', async () => {
 
 it('should reset input field to 0', async () => {
   const user = userEvent.setup();
-  const mockFn = jest.fn();
+  const mockFn = vi.fn();
 
   render(<Card setCartItems={mockFn} />);
 
