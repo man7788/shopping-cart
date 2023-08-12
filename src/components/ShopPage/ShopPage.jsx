@@ -3,6 +3,7 @@ import { useOutletContext } from 'react-router-dom';
 import styles from './ShopPage.module.css';
 import Card from '../Card/Card';
 import useStoreURL from '../UseStoreURL';
+import PropTypes from 'prop-types';
 
 function ShopPage() {
   const { cartItems, setCartItems } = useOutletContext();
@@ -28,6 +29,11 @@ function ShopPage() {
 }
 
 export default ShopPage;
+
+ShopPage.propTypes = {
+  cartItems: PropTypes.number,
+  setCartItems: PropTypes.func,
+};
 
 // const storage = [
 //   { itemName: 'Alpha', id: uniqid() },

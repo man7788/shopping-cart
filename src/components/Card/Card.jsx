@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import styles from './Card.module.css';
+import PropTypes from 'prop-types';
 
 function Card({ cartItems, setCartItems, itemName = 'Item Name' }) {
   const [quantity, setQuantity] = useState(0);
@@ -44,5 +45,10 @@ function Card({ cartItems, setCartItems, itemName = 'Item Name' }) {
     </div>
   );
 }
+
+Card.propTypes = {
+  cartItems: PropTypes.number,
+  setCartItems: PropTypes.func,
+};
 
 export default Card;

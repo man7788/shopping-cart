@@ -3,6 +3,7 @@ import styles from './Nav.module.css';
 import Cart from '../Cart/Cart';
 import logo from '../../images/logo.svg';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const StyledLink = styled(NavLink)`
   text-decoration: none;
@@ -32,3 +33,7 @@ function Nav({ cartItems }) {
 }
 
 export default Nav;
+
+Nav.propTypes = {
+  cartItems: PropTypes.number,
+};

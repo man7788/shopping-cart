@@ -1,5 +1,6 @@
 import cart from '../../images/cart.png';
 import styles from './Cart.module.css';
+import PropTypes from 'prop-types';
 
 function Cart({ cartItems }) {
   return (
@@ -11,3 +12,7 @@ function Cart({ cartItems }) {
 }
 
 export default Cart;
+
+Cart.propTypes = {
+  cartItems: PropTypes.number,
+};
